@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import { 
+import {
     makeArrayOfNames,
     makeReversedArrayOfTypes,
     makeSpanishLanguageArray,
@@ -18,11 +18,11 @@ const pets = [
     }
 ];
 
-skip('should make an array of names', (expect) => {
+test('should make an array of names', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = ['coco', 'jumper'];
-    
+
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = makeArrayOfNames(pets);
@@ -32,11 +32,11 @@ skip('should make an array of names', (expect) => {
     expect.deepEqual(actual, expected);
 });
 
-skip('should make a reverse array of type', (expect) => {
+test('should make a reverse array of type', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = ['frog', 'cat'];
-    
+
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = makeReversedArrayOfTypes(pets);
@@ -46,7 +46,7 @@ skip('should make a reverse array of type', (expect) => {
     expect.deepEqual(actual, expected);
 });
 
-skip('should make a spanish array of pet objects', (expect) => {
+test('should make a spanish array of pet objects', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = [
@@ -59,7 +59,7 @@ skip('should make a spanish array of pet objects', (expect) => {
             tipo: 'jumper',
         }
     ];
-    
+
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = makeSpanishLanguageArray(pets);

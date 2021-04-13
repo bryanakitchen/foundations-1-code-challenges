@@ -1,5 +1,5 @@
 // IMPORT MODULES under test here:
-import { 
+import {
     organizePricesByKey,
     makeAHashMap,
     countByCategory,
@@ -8,31 +8,31 @@ import {
 const { test, skip } = QUnit;
 
 const groceries = [
-    { 
+    {
         id: 'apple',
         price: 3,
         quantity: 2,
         category: 'fruit'
     },
-    { 
+    {
         id: 'banana',
         price: 1,
         quantity: 3,
         category: 'fruit'
     },
-    { 
+    {
         id: 'dog food',
         price: 5,
         quantity: 1,
         category: 'other'
     },
-    { 
+    {
         id: 'milk',
         price: 2,
         quantity: 1,
         category: 'dairy'
     },
-    { 
+    {
         id: 'cheese',
         price: 4,
         quantity: 4,
@@ -40,7 +40,7 @@ const groceries = [
     },
 ];
 
-skip('should organize prices by key', (expect) => {
+test('should organize prices by key', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = {
@@ -50,7 +50,7 @@ skip('should organize prices by key', (expect) => {
         milk: 2,
         cheese: 4
     };
-    
+
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = organizePricesByKey(groceries);
@@ -64,38 +64,38 @@ skip('should make a hash map', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = {
-        apple: { 
+        apple: {
             id: 'apple',
             price: 3,
             quantity: 2,
             category: 'fruit'
         },
-        banana: { 
+        banana: {
             id: 'banana',
             price: 1,
             quantity: 3,
             category: 'fruit'
         },
-        'dog food': { 
+        'dog food': {
             id: 'dog food',
             price: 5,
             quantity: 1,
             category: 'other'
         },
-        milk: { 
+        milk: {
             id: 'milk',
             price: 2,
             quantity: 1,
             category: 'dairy'
         },
-        cheese:    { 
+        cheese: {
             id: 'cheese',
             price: 4,
             quantity: 4,
             category: 'dairy'
         }
     };
-    
+
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = makeAHashMap(groceries);
@@ -113,7 +113,7 @@ skip('should make a count object', (expect) => {
         other: 1,
         dairy: 2
     };
-    
+
     //Act 
     // Call the function you're testing and set the result to a const
     const actual = countByCategory(groceries);
