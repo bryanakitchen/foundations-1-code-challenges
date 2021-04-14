@@ -54,13 +54,21 @@ export function organizePricesByKey(arr) {
     let obj = {}
 
     arr.forEach(item => {
-        let id = item.id;
-        let price = item.price;
-        obj[id] = price;
+        // let id = item.id;
+        // let price = item.price;
+        obj[item.id] = item.price;
     });
 
     return obj;
+
+    // return arr.reduce((acc, current) => {
+    //     return {
+    //         ...acc,
+    //         [current.id]: current.price
+    //     }}, {})
+
 }
+
 
 /*
 Output: 
@@ -99,7 +107,12 @@ Output:
 */
 
 export function makeAHashMap(arr) {
-    return {};
+
+    // const newObj = {}
+    // arr.forEach((item) => {
+    //     newObj[item.id] = item;
+    // });
+    // return newObj;
 }
 
 
@@ -113,5 +126,8 @@ Output:
 */
 
 export function countByCategory(arr) {
-    return {};
+    // const newObj = {}
+
+
+    // return newObj;
 }

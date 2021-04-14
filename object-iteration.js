@@ -22,8 +22,14 @@ export function makeMoreScreamingKeys(someObject) {
 
     let newObj = {}
 
+    // for(let key in someObject) {
+    //     let value = someObject[key];
+    //     let upperKey = key.toUpperCase();
+    //     newObj[upperKey] = value;
+    // }
+
     for (const [key, value] of Object.entries(someObject)) {
-        newObj[key.toUpperCase()] = value
+        newObj[key.toUpperCase()] = value;
     }
 
     return newObj;
@@ -58,7 +64,7 @@ Output:
 */
 
 export function makeTuples(someObject) {
-    // let arr = []
+    let arr = []
 
     // for (let i of keys) {
     //     for (let j of values) {
@@ -68,9 +74,9 @@ export function makeTuples(someObject) {
     //     }
     // }
 
-    // for (const [key, value] of Object.entries(someObject)) {
-    //     arr.push([key, value])
-    // }
+    for (const [key, value] of Object.entries(someObject)) {
+        arr.push([key, value])
+    }
 
     return Object.entries(someObject);
 }
