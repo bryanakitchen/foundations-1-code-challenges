@@ -51,21 +51,22 @@ Output:
 
 export function organizePricesByKey(arr) {
 
-    let obj = {}
+    // let obj = {}
 
-    arr.forEach(item => {
-        // let id = item.id;
-        // let price = item.price;
-        obj[item.id] = item.price;
-    });
+    // arr.forEach(item => {
+    //     // let id = item.id;
+    //     // let price = item.price;
+    //     obj[item.id] = item.price;
+    // });
 
-    return obj;
+    // return obj;
 
-    // return arr.reduce((acc, current) => {
-    //     return {
-    //         ...acc,
-    //         [current.id]: current.price
-    //     }}, {})
+    return arr.reduce((acc, current) => {
+        return {
+            ...acc,
+            [current.id]: current.price
+        }
+    }, {})
 
 }
 
@@ -108,6 +109,21 @@ Output:
 
 export function makeAHashMap(arr) {
 
+    return arr.reduce((acc, current) => {
+        // console.table(JSON.stringify(acc));
+        // console.table(acc)
+        acc[current.id] = current;
+        return acc;
+    }, {})
+
+    // return arr.reduce((acc, current) => {
+    //     return {
+    //         ...acc,
+    //         [current.id]: current
+    //     }
+    // }, {})
+
+
     // const newObj = {}
     // arr.forEach((item) => {
     //     newObj[item.id] = item;
@@ -126,8 +142,24 @@ Output:
 */
 
 export function countByCategory(arr) {
-    // const newObj = {}
 
+    // return arr.reduce((acc, current) => {
+    //     return {
+    //         ...acc,
+    //         [current.category]: (acc[current.category] || 0) + 1
+    //     }
+    // }, {})
 
-    // return newObj;
+    return arr.reduce((acc, current) => {
+        acc[current.category] = (acc[current.category] || 0) + 1;
+        return acc;
+    }, {})
+
+    // readable version:
+    // return arr.reduce((acc, current) => {
+    //     if (!acc[current.category]) acc[current.category] = 1; 
+    //     else acc[current.category] = acc[current.category] + 1;
+    //     return acc;
+    // }, {});
+
 }

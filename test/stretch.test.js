@@ -60,7 +60,7 @@ test('should organize prices by key', (expect) => {
     expect.deepEqual(actual, expected);
 });
 
-skip('should make a hash map', (expect) => {
+test('should make a hash map', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = {
@@ -105,7 +105,7 @@ skip('should make a hash map', (expect) => {
     expect.deepEqual(actual, expected);
 });
 
-skip('should make a count object', (expect) => {
+test('should make a count object', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const expected = {
